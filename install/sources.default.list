@@ -1,0 +1,31 @@
+# Konnekt .deb Repository
+
+# KG 09-MAR-16
+# ============
+# Deleted konnekt.com.au/ubuntu/
+# Commented out the old KA8hlalphabet......
+# Added repo.konnekt.net.au/repo_current/
+# Added repo.konnekt.net.au/repo_test/.
+#   repo_test is commented out below, but included so that it can easily be activated using Ubuntu Software Center.
+#   The idea is that when we have a new software version to test, we will put it into repo_test and then temporarily
+#   select repo_test instead of repo_current in Ubuntu Software Center on a test Videophone.
+
+# KG 10-MAR-16
+# ============
+# Corrected the old KA8hlalphabet entry - still commented out, but it was wrong.
+
+# KG 05-MAY-17
+# ============
+# Changed to suit 64-bit on Xenial (Ubuntu 16.04).
+# Deleted old KA8hlalphabet completely.
+# Added trusted=yes option, to bypass Ubuntu 16.04 stricter auth rules
+
+# KG 03-SEP-21
+# ============
+# Updated for Lubuntu 20.04 (focal).
+
+
+#deb [trusted=yes] http://konnekt:ZyLaZyXeTysu@repo.konnekt.net.au/repo_test/ focal main
+deb [trusted=yes] http://konnekt:ZyLaZyXeTysu@repo.konnekt.net.au/repo_current/ focal main
+
+
