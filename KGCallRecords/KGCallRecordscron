@@ -1,0 +1,19 @@
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+	
+# KG 18-Feb-19 Execute the KGCallRecords.sh script at nominated times.
+#              (typically weekly, early Monday morning)
+#
+# SUPER IMPORTANT!!!
+# 1) Every entry MUST end with a newline, including the last. So make sure the last entry is followed by a blank line.
+# 2) File ownership and permissions must be as per other cron files in this folder.
+
+# USEFUL WAY TO TEST THE SCRIPT: Execute every minute, redirect output to text files in /home/konnekt.
+#  m  h  dom mon dow  user      command
+#  *  *    *   *   *  konnekt   /home/konnekt/Downloads/CallRecords/KGCallRecords.sh > KGCR.txt 2> KGCRE.txt
+
+# THE ACTUAL CRON ENTRY: Execute every Monday at 4am.
+#  m  h  dom mon dow  user      command
+   0  4    *   *   1  konnekt   /home/konnekt/Downloads/CallRecords/KGCallRecords.sh
+
+
